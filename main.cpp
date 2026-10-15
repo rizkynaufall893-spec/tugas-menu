@@ -2,29 +2,27 @@
 using namespace std;
 
 int main() {
-    string menu[2]={"soto","rawon"};
-    int harga[2]={15000,20000};
+    string menu[2] = {"soto", "rawon"};
+    int harga[2] = {15000, 20000};
     int t;
     int porsi[2];
     int total[2];
-    for(t=0; t<1; t++){
-        cout<<"Menu ";
-        cout<<menu[0]<<endl;
-        cout<<"Harga: ";
-        cout<<harga[t]<<endl;
-        cout<<"Masukkan Porsi: ";
-        cin>>porsi[t];
-        cout<<"Total Anda ";
-        cin>>total[t];
-        cout<<"Menu ";
-        cout<<menu[1]<<endl;
-        cout<<"Harga ";
-        cout<<harga[t]<<endl;
-        cout<<"Masukkan Porsi: ";
-        cin>>porsi[t];
-        cout<<"Total Semuanya: ";
-        cout<<total[t];
+    int totalSemua = 0;
+
+    for(t = 0; t < 2; t++){
+        cout << "Menu: " << menu[t] << endl;
+        cout << "Harga: " << harga[t] << endl;
+        cout << "Masukkan Porsi: ";
+        cin >> porsi[t];
+        
+        total[t] = harga[t] * porsi[t];
+        cout << "Total Anda: " << total[t] << endl << endl;
+
+        totalSemua += total[t];
     }
+
+    cout << "Total Semuanya: " << totalSemua << endl;
+
     system("pause");
     return 0;
-    }
+}
