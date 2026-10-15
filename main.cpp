@@ -25,6 +25,6 @@ int main() {
         cout<<"Total Semuanya: ";
         cout<<total[t];
     }
-    sytem("pause");
+    system("pause");
     return 0;
     }
